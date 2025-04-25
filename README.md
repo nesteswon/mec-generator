@@ -6,4 +6,3 @@
 
 <img width="1093" alt="스크린샷 2025-04-25 오후 1 10 17" src="https://github.com/user-attachments/assets/8921cac6-d0dd-4fff-a9dd-65295aba4cde" />
 
-<img width="1060" alt="스크린샷 2025-04-25 오후 1 10 24" src="https://github.com/user-attachments/assets/a2533b44-3e74-43f4-a9cc-ec73a8592ad9" />
