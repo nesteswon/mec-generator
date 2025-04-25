@@ -44,7 +44,7 @@ if uploaded_file:
 # ---------- 제작자 서명 ----------
 st.markdown("""
     <hr>
-    <div style='text-align: center; font-size: 50px; color: gray; margin-top: 30px;'>
-        made with ❤️ by <strong>Encodinghouse Team</strong>
+    <div style='text-align: center; font-size: 20px; color: gray; margin-top: 30px;'>
+        Made with ❤️ by <strong>EncodingHouse Team</strong>
     </div>
 """, unsafe_allow_html=True)
