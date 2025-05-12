@@ -37,27 +37,39 @@ if st.session_state.dark_mode:
         body, .stApp {
             background-color: #0f171e;
             color: #ffffff;
+            margin: 0 !important;
+            padding: 0 !important;
         }
+
+        header, footer {
+            visibility: hidden;
+            height: 0;
+        }
+
         .stMarkdown, .stText, .stHeader, .stSubheader, .stCaption,
         .stDataFrame, .stTable, .stAlert, label, p, h1, h2, h3, h4, h5, h6 {
             color: #ffffff !important;
         }
+
         .stButton>button {
             background-color: #0f79af;
             color: #ffffff;
             font-weight: bold;
         }
+
         .stFileUploader, .stTextInput, .stTextArea, .stSelectbox,
         .stRadio > div, .stExpanderHeader {
             background-color: #1c1f26;
             color: #ffffff;
         }
+
         .stDownloadButton > button {
             background-color: #ffffff !important;
             color: #000000 !important;
             font-weight: bold !important;
             border: 1px solid #888 !important;
         }
+
         .stDownloadButton > button:hover {
             background-color: #0f79af !important;
             color: #ffffff !important;
@@ -65,6 +77,7 @@ if st.session_state.dark_mode:
         }
         </style>
     """, unsafe_allow_html=True)
+
 else:
     st.markdown("""
         <style>
