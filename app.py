@@ -8,65 +8,56 @@
 # of this file is strictly prohibited without prior written consent from EncodingHouse Team.
 # ------------------------------------------------------------------------------
 import streamlit as st
+st.set_page_config(page_title="MEC Generator", page_icon="🎬", layout="centered")
+
 import pandas as pd
 import requests
 import xml.etree.ElementTree as ET
 from generate_mec import generate_mec_xml_from_dataframe, is_valid_xml_structure
 
-# ---------- 페이지 설정 ----------
-st.set_page_config(page_title="MEC Generator", page_icon="🎬", layout="centered")
+# ---------- 사용자 정보 ----------
+USERS = {
+    "admin": "1234",
+    "hyunjin.kim9@cj.net": "pass1"
+}
 
-# ---------- 테마 상태 기억 및 토글 ----------
+# ---------- 상태 초기화 ----------
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+    st.session_state.username = ""
 if "dark_mode" not in st.session_state:
     st.session_state.dark_mode = True
+if "show_login" not in st.session_state:
+    st.session_state.show_login = False
 
-def toggle_theme():
-    st.session_state.dark_mode = not st.session_state.dark_mode
-
-col1, col2 = st.columns([8, 2])
-with col1:
-    st.markdown("## 🎬 MEC Metadata Generator")
-with col2:
-    mode_label = "🌞 Light Mode" if st.session_state.dark_mode else "🌙 Dark Mode"
-    st.button(mode_label, on_click=toggle_theme)
-
+# ---------- 다크모드 적용 ----------
 if st.session_state.dark_mode:
     st.markdown("""
         <style>
-        /* 전체 다크모드 배경과 텍스트 */
         body, .stApp {
             background-color: #0f171e;
             color: #ffffff;
         }
-
         .stMarkdown, .stText, .stHeader, .stSubheader, .stCaption,
-        .stDataFrame, .stTable, .stAlert, label, p, h1, h2, h3, h4, h5, h6,
-        .css-1d391kg, .css-1cpxqw2 {
+        .stDataFrame, .stTable, .stAlert, label, p, h1, h2, h3, h4, h5, h6 {
             color: #ffffff !important;
         }
-
         .stButton>button {
             background-color: #0f79af;
             color: #ffffff;
             font-weight: bold;
         }
-
         .stFileUploader, .stTextInput, .stTextArea, .stSelectbox,
         .stRadio > div, .stExpanderHeader {
             background-color: #1c1f26;
             color: #ffffff;
         }
-
-                /* 다운로드 버튼 스타일 */
         .stDownloadButton > button {
             background-color: #ffffff !important;
             color: #000000 !important;
             font-weight: bold !important;
             border: 1px solid #888 !important;
-            transition: background-color 0.3s, color 0.3s;
         }
-
-        /* Hover 시 반전 효과 */
         .stDownloadButton > button:hover {
             background-color: #0f79af !important;
             color: #ffffff !important;
@@ -74,8 +65,6 @@ if st.session_state.dark_mode:
         }
         </style>
     """, unsafe_allow_html=True)
-
-
 else:
     st.markdown("""
         <style>
@@ -85,6 +74,14 @@ else:
     """, unsafe_allow_html=True)
 
 # ---------- 함수 정의 ----------
+def toggle_theme():
+    st.session_state.dark_mode = not st.session_state.dark_mode
+
+def logout():
+    st.session_state.logged_in = False
+    st.session_state.username = ""
+    st.rerun()
+
 def validate_summary_length(df):
     errors = []
     for i, row in df.iterrows():
@@ -98,7 +95,9 @@ def validate_summary_length(df):
 
 def notify_slack_of_xml_error(error_message, filename="(알 수 없음)"):
     webhook_url = "https://hooks.slack.com/services/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"
-    payload = {"text": f"*MEC XML 유효성 검사 실패!*\n📄 파일명: `{filename}`\n```{error_message}```"}
+    payload = {
+        "text": f"*MEC XML 유효성 검사 실패!*\n📄 파일명: `{filename}`\n```{error_message}```"
+    }
     try:
         response = requests.post(webhook_url, json=payload)
         if response.status_code != 200:
@@ -133,15 +132,58 @@ sample_library = {
     "Episode": load_sample_xml("Episode.xml")
 }
 
+# ---------- 상단 인터페이스 ----------
+col1, col2 = st.columns([6, 3])
+with col1:
+    st.markdown("<h2 style='text-align:center;'>🎬 MEC Metadata Generator</h2>", unsafe_allow_html=True)
+with col2:
+    mode_label = "🌞 Light Mode" if st.session_state.dark_mode else "🌙 Dark Mode"
+    if st.button(mode_label):
+        toggle_theme()
+        st.rerun()
+
+    if st.session_state.logged_in:
+        st.markdown(f"**👤 {st.session_state.username}**")
+        if st.button("🚪 로그아웃"):
+            logout()
+    else:
+        if st.button("🔐 로그인"):
+            st.session_state.show_login = True
+
+# ---------- 로그인 화면 ----------
+if st.session_state.show_login:
+    col1, col2, col3 = st.columns([1, 5, 1])
+    with col2:
+        with st.form("login_form", clear_on_submit=True):
+            st.markdown("#### 로그인")
+            inner1, inner2, inner3 = st.columns([1, 5, 1])
+            with inner2:
+                username = st.text_input("사용자 이름")
+                password = st.text_input("비밀번호", type="password")
+                if st.form_submit_button("로그인"):
+                    if USERS.get(username) == password:
+                        st.session_state.logged_in = True
+                        st.session_state.username = username
+                        st.session_state.show_login = False
+                        st.success(f"환영합니다, {username}님!")
+                        st.rerun()
+                    else:
+                        st.error("❌ 사용자 이름 또는 비밀번호가 올바르지 않습니다.")
+
+if not st.session_state.logged_in:
+    st.stop()
+
 # ---------- 탭 구성 ----------
 tab1, tab2 = st.tabs(["📄 MEC XML 생성", "🧩 2nd. Checkpoint"])
-
 generated_xml = None
 
 # ---------- 탭 1: MEC 생성 ----------
 with tab1:
-    st.markdown("""<h4>CSV 업로드 후 XML 생성</h4>""", unsafe_allow_html=True)
-    uploaded_file = st.file_uploader("📁 CSV 파일을 업로드하세요", type=["csv"])
+    st.markdown('<div style="text-align:center;"><h4>CSV 업로드 후 XML 생성</h4></div>', unsafe_allow_html=True)
+
+    col1, col2, col3 = st.columns([1, 5, 1])
+    with col2:
+        uploaded_file = st.file_uploader("📁 CSV 파일을 업로드하세요", type=["csv"])
 
     if uploaded_file:
         filename = uploaded_file.name
@@ -175,8 +217,8 @@ with tab1:
 
 # ---------- 탭 2: 구조 비교 ----------
 with tab2:
-    st.markdown("""<h4>2nd. Checkpoint</h4>""", unsafe_allow_html=True)
-    selected_sample = st.radio("MEC 종류를 선택하세요:", list(sample_library.keys()), horizontal=True)
+    st.markdown('<div style="text-align:center;"><h4>🧩 2nd. Checkpoint</h4></div>', unsafe_allow_html=True)
+    selected_sample = st.radio("비교할 샘플을 선택하세요:", list(sample_library.keys()), horizontal=True)
     sample_xml = sample_library.get(selected_sample)
 
     if sample_xml and generated_xml:
