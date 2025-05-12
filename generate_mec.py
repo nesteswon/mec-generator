@@ -58,6 +58,17 @@ def highlight_invalid_xml(xml_string):
                 highlighted.append(f"{prefix}{line}")
         return f"<div><strong style='color:red'>Invalid XML:</strong> {error_msg}</div><pre style='white-space:pre-wrap;'>" + "\n".join(highlighted) + "</pre>"
 
+def validate_summary_length(df):
+    errors = []
+    for idx, row in df.iterrows():
+        s190 = to_str(row.get("Summary190"))
+        s400 = to_str(row.get("Summary400"))
+        if len(s190) > 190:
+            errors.append((idx + 2, "Summary190", len(s190)))
+        if len(s400) > 400:
+            errors.append((idx + 2, "Summary400", len(s400)))
+    return errors
+
 def generate_mec_xml_from_dataframe(df: pd.DataFrame):
     nsmap = {
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
