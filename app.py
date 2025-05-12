@@ -134,7 +134,7 @@ sample_library = {
 }
 
 # ---------- 탭 구성 ----------
-tab1, tab2 = st.tabs(["📄 MEC XML 생성", "🧩 구조 비교"])
+tab1, tab2 = st.tabs(["📄 MEC XML 생성", "🧩 2nd. Checkpoint"])
 
 generated_xml = None
 
@@ -175,8 +175,8 @@ with tab1:
 
 # ---------- 탭 2: 구조 비교 ----------
 with tab2:
-    st.markdown("""<h4>샘플 XML과 구조 비교</h4>""", unsafe_allow_html=True)
-    selected_sample = st.radio("비교할 샘플을 선택하세요:", list(sample_library.keys()), horizontal=True)
+    st.markdown("""<h4>2nd. Checkpoint</h4>""", unsafe_allow_html=True)
+    selected_sample = st.radio("MEC 종류를 선택하세요:", list(sample_library.keys()), horizontal=True)
     sample_xml = sample_library.get(selected_sample)
 
     if sample_xml and generated_xml:
