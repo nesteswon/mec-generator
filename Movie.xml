@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mdmec:CoreMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:md="http://www.movielabs.com/schema/md/v2.6/md" xmlns:mdmec="http://www.movielabs.com/schema/mdmec/v2.6" xsi:schemaLocation="http://www.movielabs.com/schema/mdmec/v2.6/mdmec-v2.6.xsd">
+
+<mdmec:Basic ContentID="md:cid:org:cloverfilms:Dirty_Money">
+
+<!-- You can also add multiple localization info metadata for NL, DE, IT, IN ...etc language in single MEC if needed for like below. -->
+<md:LocalizedInfo language="en-US">
+
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>Dirty Money</md:TitleDisplayUnlimited>
+
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+
+<md:ArtReference resolution ="1920x2560" purpose="boxart">Dirty_Money-US-Boxart-3x4.jpg</md:ArtReference>
+<md:ArtReference resolution ="3840x2160" purpose="cover">Dirty_Money-US-Cover-16x9.jpg</md:ArtReference>
+<md:ArtReference resolution ="3840x2160" purpose="hero">Dirty_Money-US-Hero-16x9.jpg</md:ArtReference>
+<md:ArtReference resolution ="2000x3000" purpose="poster">Dirty_Money-US-Poster-2x3.jpg</md:ArtReference>
+
+<md:Summary190>Two Detectives, who are partners in both law enforcement and shady side hustles, stumble upon intel about a crime syndicate’s dirty money and strives to seize the life-changing opportunity.</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>Detectives Myung-deuk and Dong-hyuk, partners in both law enforcement and shady side hustles, stumble upon intel about a crime syndicate’s dirty money. Seizing the opportunity for a life-changing score, they plot to steal the untraceable cash. But their seemingly foolproof plan goes awry when an undercover officer is killed at the scene.</md:Summary400>
+<!-- Genres must be submitted using the AV Genre codes, such as below. -->
+<!-- Genres may be provided in just one, or all LocalizedInfo blocks.See the spec documentation for more detail. -->
+<!-- At least 1 genre is required.Up to 3 genres are allowed. -->
+<md:Genre id="av_subgenre_action_crime"></md:Genre>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="ko-KR">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>더러운 돈에 손 대지 마라</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+<!-- Localized Boxart and Coverart will be required per territory localization requirements. -->
+<md:ArtReference resolution ="1920x2560" purpose="boxart">Dirty_Money-KR-Boxart-3x4.jpg</md:ArtReference>
+<md:ArtReference resolution ="3840x2160" purpose="cover">Dirty_Money-KR-Cover-16x9.jpg</md:ArtReference>
+<md:ArtReference resolution ="3840x2160" purpose="hero">Dirty_Money-KR-Hero-16x9.jpg</md:ArtReference>
+<md:ArtReference resolution ="2000x3000" purpose="poster">Dirty_Money-KR-Poster-2x3.jpg</md:ArtReference>
+
+<md:Summary190>수사도, 뒷돈 챙기는 부업도 늘 함께 하는 생계형 형사 둘. 우연히 범죄 조직의 검은돈에 대한 정보를 입수한 두 사람은 인생 역전을 위해 신고도, 추적도 불가한 돈을 훔치기로 계획한다. 그러나 완벽한 계획을 세웠다고 생각한 현장에서 사건이 꼬이게 되는데...</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>수사도, 뒷돈 챙기는 부업도 늘 함께 하는 생계형 형사 둘. 우연히 범죄 조직의 검은돈에 대한 정보를 입수한 두 사람은 인생 역전을 위해 신고도, 추적도 불가한 돈을 훔치기로 계획한다. 그러나 완벽한 계획을 세웠다고 생각했던 현장에서 잠입 수사 중이던 형사의 죽음으로 사건은 꼬여만 간다.</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="ms-MY">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>Dirty Money</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+<!-- Localized Boxart and Coverart will be required per territory localization requirements. -->
+<md:ArtReference resolution ="1920x2560" purpose="boxart">Dirty_Money-US-Boxart-3x4.jpg</md:ArtReference>
+<md:ArtReference resolution ="3840x2160" purpose="cover">Dirty_Money-US-Cover-16x9.jpg</md:ArtReference>
+<md:ArtReference resolution ="2000x3000" purpose="poster">Dirty_Money-US-Poster-2x3.jpg</md:ArtReference>
+<md:Summary190>Dua orang detektif yang bertugas bersama dalam penguatkuasaan undang-undang dan bekerja sampingan haram menemui maklumat tentang sindiket duit haram. Mereka mahu ambil peluang berharga ini.</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>Detektif Myung-deuk dan Detektif Dong-hyuk, rakan sekerja dalam penguatkuasaan undang-undang dan kerja sampingan haram menemui maklumat tentang sindiket duit haram. Mengambil peluang berharga ini, mereka mahu mencuri duit yang tidak boleh dijejaki itu. Namun rancangan mereka di luar kawalan apabila pegawai polis yang menyamar telah terbunuh di tempat kejadian.</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="id-ID">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>Dirty Money</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+<!-- Localized Boxart and Coverart will be required per territory localization requirements. -->
+<md:ArtReference resolution ="1920x2560" purpose="boxart">Dirty_Money-US-Boxart-3x4.jpg</md:ArtReference>
+<md:ArtReference resolution ="3840x2160" purpose="cover">Dirty_Money-US-Cover-16x9.jpg</md:ArtReference>
+<md:ArtReference resolution ="2000x3000" purpose="poster">Dirty_Money-US-Poster-2x3.jpg</md:ArtReference>
+<md:Summary190>Detektif Myung-deuk dan Dong-hyuk, partner dalam penegakan hukum dan pekerjaan sampingan mencurigakan, menemukan informasi tentang uang kotor milik sindikat kejahatan dan ingin mengambilnya.</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>Detektif Myung-deuk dan Dong-hyuk, partner dalam penegakan hukum dan pekerjaan sampingan mencurigakan, menemukan informasi tentang uang kotor milik sindikat kejahatan. Mengambil kesempatan demi hidup yang lebih layak, mereka berencana mencuri uang yang tidak dapat dilacak itu. Namun, rencana mereka menjadi kacau ketika seorang polisi yang menyamar terbunuh di TKP.</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="th-TH">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>เกมเหลี่ยมชิงเงินบาป</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+<!-- Localized Boxart and Coverart will be required per territory localization requirements. -->
+<md:ArtReference resolution ="1920x2560" purpose="boxart">Dirty_Money-TH-Boxart-3x4.jpg</md:ArtReference>
+<md:ArtReference resolution ="3840x2160" purpose="cover">Dirty_Money-TH-Cover-16x9.jpg</md:ArtReference>
+<md:ArtReference resolution ="2000x3000" purpose="poster">Dirty_Money-TH-Poster-2x3.jpg</md:ArtReference>
+<md:Summary190>คู่หูตำรวจสืบสวนที่แอบควงงานนอกเสี่ยงตะรางบังเอิญไปล่วงรู้ข่าวลับเรื่องเงินสกปรกของแก๊งอาชญากรรมกลุ่มหนึ่งเข้า และพยายามจะพลิกชีวิตด้วยการชิงเงินก้อนนี้มา</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>คู่หูตำรวจสืบสวนมยองดึกและดงฮยอกที่แอบควงงานนอกเสี่ยงตะรางบังเอิญไปล่วงรู้ข่าวลับเรื่องเงินสกปรกของแก๊งอาชญากรรมกลุ่มหนึ่งเข้า ทั้งคู่ไม่ยอมพลาดโอกาสทองพลิกชีวิตและวางแผนเพื่อชิงเงินสดที่ตามรอยไม่ได้นี้มา แต่แล้วแผนที่ดูจะสมบูรณ์แบบกลับต้องสะดุดเมื่อเจ้าหน้าที่แฝงตัวนายหนึ่งถูกสังหารในที่เกิดเหตุ</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="zh-CN">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>别碰脏钱</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+<!-- Localized Boxart and Coverart will be required per territory localization requirements. -->
+<md:ArtReference resolution ="1920x2560" purpose="boxart">Dirty_Money-CN-Boxart-3x4.jpg</md:ArtReference>
+<md:ArtReference resolution ="3840x2160" purpose="cover">Dirty_Money-CN-Cover-16x9.jpg</md:ArtReference>
+<md:ArtReference resolution ="2000x3000" purpose="poster">Dirty_Money-CN-Poster-2x3.jpg</md:ArtReference>
+<md:Summary190>两名警探既是执法搭档，也是一起从事灰色交易的伙伴。他们偶然获得了一个犯罪组织的脏钱线索，并决心抓住这个改变命运的机会。</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>明德和东赫是搭档警探，不仅在执法工作中合作，还在暗地里从事一些见不得光的勾当。一次，他们意外得知一个犯罪组织的脏钱线索，认为这是改变命运的绝佳机会，于是策划偷走这笔无法追踪的现金。然而，他们看似万无一失的计划却出了意外，一名卧底警察在现场被杀，引发了更大的危机。</md:Summary400>
+</md:LocalizedInfo>
+
+<md:ReleaseYear>2024</md:ReleaseYear>
+<md:ReleaseDate>2024-10-17</md:ReleaseDate>
+<!-- WorkType is Required -->
+<md:WorkType>movie</md:WorkType>
+<!-- movie, episode, promotion, season, series -->
+<!-- The ID used in the MMC and in the Avail must also be included in the AltIdentifier section -->
+<md:AltIdentifier>
+<md:Namespace>ORG</md:Namespace>
+<!--EIDR, ISAN, IMDB, ORG-->
+<md:Identifier>Dirty_Money</md:Identifier>
+</md:AltIdentifier>
+<md:RatingSet>
+<!-- each rating specifies exactly one country, system and value -->
+<!-- At least one rating is required.If the work is not rated, use -->
+<md:Rating>
+<md:Region>
+<md:country>US</md:country>
+</md:Region>
+<md:System>MPAA</md:System>
+<md:Value>PG-13</md:Value>
+</md:Rating>
+<md:Rating>
+<md:Region>
+<md:country>KR</md:country>
+</md:Region>
+<md:System>KMRB</md:System>
+<md:Value>15+</md:Value>
+</md:Rating>
+</md:RatingSet>
+<!-- people are used for the cast and crew. -->
+<!-- You can also add Producers, Writers, Actress..etc like below. -->
+<md:People>
+<md:Job>
+<md:JobFunction>Director</md:JobFunction>
+<md:BillingBlockOrder>1</md:BillingBlockOrder>
+</md:Job>
+<md:Name>
+<md:DisplayName language="en-US">KIM Min-su</md:DisplayName>
+<md:DisplayName language="ko-KR">김민수</md:DisplayName>
+<md:DisplayName language="ms-MY">KIM Min-su</md:DisplayName>
+<md:DisplayName language="id-ID">KIM Min-su</md:DisplayName>
+<md:DisplayName language="th-TH">คิมมินซู</md:DisplayName>
+<md:DisplayName language="zh-CN">金珉洙</md:DisplayName>
+</md:Name>
+</md:People>
+
+<md:People>
+<md:Job>
+<md:JobFunction>Writer</md:JobFunction>
+<md:BillingBlockOrder>1</md:BillingBlockOrder>
+</md:Job>
+<md:Name>
+<md:DisplayName language="en-US">KIM Min-su</md:DisplayName>
+<md:DisplayName language="ko-KR">김민수</md:DisplayName>
+<md:DisplayName language="ms-MY">KIM Min-su</md:DisplayName>
+<md:DisplayName language="id-ID">KIM Min-su</md:DisplayName>
+<md:DisplayName language="th-TH">คิมมินซู</md:DisplayName>
+<md:DisplayName language="zh-CN">金珉洙</md:DisplayName>
+</md:Name>
+</md:People>
+
+<md:People>
+<md:Job>
+<md:JobFunction>Actor</md:JobFunction>
+<md:BillingBlockOrder>1</md:BillingBlockOrder>
+</md:Job>
+<md:Name>
+<md:DisplayName language="en-US">JUNG Woo</md:DisplayName>
+<md:DisplayName language="ko-KR">정우</md:DisplayName>
+<md:DisplayName language="ms-MY">JUNG Woo</md:DisplayName>
+<md:DisplayName language="id-ID">JUNG Woo</md:DisplayName>
+<md:DisplayName language="th-TH">จองอู</md:DisplayName>
+<md:DisplayName language="zh-CN">郑宇</md:DisplayName>
+</md:Name>
+</md:People>
+
+<md:People>
+<md:Job>
+<md:JobFunction>Actor</md:JobFunction>
+<md:BillingBlockOrder>2</md:BillingBlockOrder>
+</md:Job>
+<md:Name>
+<md:DisplayName language="en-US">KIM Dae-myeung</md:DisplayName>
+<md:DisplayName language="ko-KR">김대명</md:DisplayName>
+<md:DisplayName language="ms-MY">KIM Dae-myeung</md:DisplayName>
+<md:DisplayName language="id-ID">KIM Dae-myeung</md:DisplayName>
+<md:DisplayName language="th-TH">คิมแดมยอง</md:DisplayName>
+<md:DisplayName language="zh-CN">金大明</md:DisplayName>
+</md:Name>
+</md:People>
+
+<md:People>
+<md:Job>
+<md:JobFunction>Actor</md:JobFunction>
+<md:BillingBlockOrder>3</md:BillingBlockOrder>
+</md:Job>
+<md:Name>
+<md:DisplayName language="en-US">PARK Byung-eun</md:DisplayName>
+<md:DisplayName language="ko-KR">박병은</md:DisplayName>
+<md:DisplayName language="ms-MY">PARK Byung-eun</md:DisplayName>
+<md:DisplayName language="id-ID">PARK Byung-eun</md:DisplayName>
+<md:DisplayName language="th-TH">พัคบยองอึน</md:DisplayName>
+<md:DisplayName language="zh-CN">朴秉恩</md:DisplayName>
+</md:Name>
+</md:People>
+
+<md:People>
+<md:Job>
+<md:JobFunction>Actor</md:JobFunction>
+<md:BillingBlockOrder>4</md:BillingBlockOrder>
+</md:Job>
+<md:Name>
+<md:DisplayName language="en-US">CHO Hyun-chul</md:DisplayName>
+<md:DisplayName language="ko-KR">조현철</md:DisplayName>
+<md:DisplayName language="ms-MY">CHO Hyun-chul</md:DisplayName>
+<md:DisplayName language="id-ID">CHO Hyun-chul</md:DisplayName>
+<md:DisplayName language="th-TH">โจฮยอนชอล</md:DisplayName>
+<md:DisplayName language="zh-CN">赵贤哲</md:DisplayName>
+</md:Name>
+</md:People>
+<!--OriginalLanguage is required by Amazon-->
+<md:OriginalLanguage>ko-KR</md:OriginalLanguage>
+<!-- AssociatedOrg is used to provide the Partner Alias and is required -->
+<!-- Include the Partner Alias value in the @organizationID attribute and the value of "licensor" in the @role attribute -->
+<md:AssociatedOrg organizationID="cloverfilms" role="licensor"/>
+</mdmec:Basic>
+<!-- CompanyDisplayCredit is used to provide customer-facing studio credits. Required. -->
+<mdmec:CompanyDisplayCredit>
+<md:DisplayString language="en-US">Clover Films Distribution Pte Ltd.</md:DisplayString>
+</mdmec:CompanyDisplayCredit>
+</mdmec:CoreMetadata>

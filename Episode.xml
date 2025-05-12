@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdmec:CoreMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:md="http://www.movielabs.com/schema/md/v2.6/md" xmlns:mdmec="http://www.movielabs.com/schema/mdmec/v2.6" xsi:schemaLocation="http://www.movielabs.com/schema/mdmec/v2.6/mdmec-v2.6.xsd">
+
+<mdmec:Basic ContentID="md:cid:org:ktstudiogenie:tvn_blind_ep02">
+
+<md:LocalizedInfo language="en-US">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>ABANDON HOPE ALL WHO ENTER HERE</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+<md:ArtReference resolution ="1920x1080" purpose="cover">tvn_blind_ep02-US-16x9_cover.jpg</md:ArtReference>
+
+<md:Summary190>Jung Man-Chun is found guilty by unanimous jury decision, and Judge Ryu Sung-Hoon sentences him to life. The jurors later gather for a dinner at Charles's restaurant.</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>With overwhelming evidence against him, Jung Man-Chun is identified as the killer. The nine jurors unanimously find him guilty, and Judge Ryu Sung-Hoon sentences him to life imprisonment. That evening, the jurors gather for a dinner at Charles's restaurant.</md:Summary400>
+<!-- Genres must be submitted using the AV Genre codes, such as below. -->
+<!-- Genres may be provided in just one, or all LocalizedInfo blocks.See the spec documentation for more detail. -->
+<!-- At least 1 genre is required.Up to 3 genres are allowed. -->
+<md:Genre id="av_genre_suspense"></md:Genre>
+<md:Genre id="av_subgenre_suspense_crime"></md:Genre>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="ko-KR">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>여기 들어온 너희</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+
+<md:Summary190>정만춘을 유죄로 지목하는 증거들. 배심원과 성훈도 만장일치로 유죄 판결. 재판 후, 배심원들은 찰스의 식당에서 회식을 한다.</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>무죄라고 주장하기엔 너무 많은 증거가 정만춘을 범인으로 지목하고 있다. 9인의 배심원도 만장일치로 유죄 의견을 냈고 성훈 역시 무기징역을 선고한다. 재판이 끝난 늦은 저녁, 배심원들은 찰스의 식당에서 회식을 한다.</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="zh-TW">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>來這裡的你們都放棄希望</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+<!-- Localized Boxart and Coverart will be required per territory localization requirements. -->
+<md:Summary190>鄭滿春被陪審團一致判定有罪，法官柳成勳判處他終身監禁。隨後，陪審員們在查爾斯的餐廳聚餐。</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>有著大量不利證據，鄭滿春被認定為兇手。九名陪審員一致判定他有罪，法官柳成勳判處他終身監禁。當晚，陪審員們在查爾斯的餐廳聚餐。</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="ms-MY">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>TINGGALKAN HARAPAN SEMUA YANG MASUK KE SINI</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+<!-- Localized Boxart and Coverart will be required per territory localization requirements. -->
+<md:Summary190>Juri memutuskan Jung Man-chun bersalah dan Hakim Ryu Sung-hoon menjatuhkan hukuman penjara seumur hidup. Para juri makan bersama di restoran Charles.</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>Bukti menunjukkan Jung Man-chun ialah pembunuhnya. Kesemua sembilan juri sebulat suara memutuskan dia bersalah dan Hakim Ryu Sung-hoon menjatuhkan hukuman penjara seumur hidup. Petang itu, para juri makan malam bersama di restoran Charles. </md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="id-ID">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>TINGGALKAN HARAPAN
+SEMUA YANG MASUK KE SINI</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+<!-- Localized Boxart and Coverart will be required per territory localization requirements. -->
+<md:Summary190>Jung Man-chun dinyatakan bersalah oleh juri dan Hakim Ryu Sung-hoon menjatuhkan hukuman seumur hidup. Para juri makan malam di restoran Charles.</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>Dengan bukti sangat kuat yang memberatkannya, Jung Man-chun divonis sebagai pembunuh. Sembilan juri dengan suara bulat menyatakan dia bersalah, dan Hakim Ryu Sung-hoon menjatuhkan hukuman penjara seumur hidup kepadanya. Malamnya, para juri berkumpul untuk makan malam di restoran Charles.</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="th-TH">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>ผู้มายังที่นี่ ทิ้งความหวังเสียเถิด</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+<!-- Localized Boxart and Coverart will be required per territory localization requirements. -->
+<md:Summary190>คณะลูกขุนตัดสินเป็นเอกฉันท์ว่าจองมันชุนผิด ผู้พิพากษารยูซองฮุนตัดสินให้จองมันชุนจำคุกตลอดชีวิต ในภายหลังคณะลูกขุนมากินมื้อค่ำที่ร้านอาหารของชาร์ลส์</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>จองมันชุนถูกชี้ตัวว่าเป็นฆาตกรเพราะหลักฐานที่มัดตัวแน่นหนา คณะลูกขุนเก้าคนเห็นเป็นเอกฉันท์ว่าจองมันชุนมีความผิด และผู้พิพากษารยูซองฮุนตัดสินให้จองมันชุนต้องโทษจำคุกตลอดชีวิต เย็นวันนั้น คณะลูกขุนรวมตัวกันเพื่อรับประทานอาหารค่ำที่ร้านอาหารของชาร์ลส์</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="pt-BR">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>A ESPERANÇA NÃO ENTRA AQUI</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+<!-- Localized Boxart and Coverart will be required per territory localization requirements. -->
+<md:Summary190>Por decisão unânime, Jung Man-Chun é considerado culpado e pega prisão perpétua. Após o julgamento, os jurados se reúnem no restaurante de Charles.</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>Com provas contundentes contra ele, Jung Man-Chun é identificado como o assassino. Os nove jurados consideram-no culpado por unanimidade, e ele é condenado à prisão perpétua pelo juiz Ryu Sung-Hoon. Naquela noite, os jurados se reúnem para jantar no restaurante de Charles.</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="fr-FR">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>ABANDONNE TOUT ESPOIR, TOI QUI ENTRE ICI</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+<!-- Localized Boxart and Coverart will be required per territory localization requirements. -->
+<md:Summary190>Jung Man-chun est déclaré coupable à l'unanimité et il est condamné à perpétuité. Le soir, les jurés se rendent au restaurant de Charles pour dîner.</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>Des preuves écrasantes incriminent Jung Man-chun et il est accusé d'être le meurtrier. Les neuf jurés le déclarent coupable à l'unanimité, et le juge Ryu Sung-hoon le condamne à perpétuité. Le soir même, les jurés se rendent au restaurant de Charles pour dîner.</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="it-IT">
+<!-- TitleDisplayUnlimited is required by Amazon. Limited to 250 characters. -->
+<md:TitleDisplayUnlimited>LASCIATE OGNI SPERANZA VOI CHE ENTRATE</md:TitleDisplayUnlimited>
+<!-- TitleSort is required by the MEC XSD, but is not used by Amazon. Blank fields such as below are acceptable. -->
+<md:TitleSort/>
+<!-- Localized Boxart and Coverart will be required per territory localization requirements. -->
+<md:Summary190>La giuria dichiara colpevole Jung Man-chun all’unanimità e il giudice Ryu Sung-hoon lo condanna all’ergastolo. I giurati poi si ritrovano da Charles.</md:Summary190>
+<!-- Summary400 is required by Amazon -->
+<md:Summary400>Le prove contro Jung Man-chun sono schiaccianti e viene accusato di essere il killer. I nove giurati lo dichiarano colpevole all’unanimità e il giudice Ryu Sung-hoon lo condanna all’ergastolo. La stessa sera, i giurati si ritrovano a cena al ristorante di Charles.</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="de-DE">
+<md:TitleDisplayUnlimited>IHR, DIE IHR HIER EINTRETET,
+LASST ALLE HOFFNUNG FAHREN</md:TitleDisplayUnlimited>
+<md:TitleSort></md:TitleSort>
+<md:Summary190>Jung Man-chun wird einstimmig schuldig gesprochen und zu lebenslanger Haft verurteilt. Später treffen sich die Geschworenen zum Abendessen.</md:Summary190>
+<md:Summary400>Aufgrund der erdrückenden Beweislast wird Jung Man-chun als Täter überführt. Die neun Geschworenen sprechen ihn einstimmig schuldig. Richter Ryu Sung-hoon verurteilt ihn daraufhin zu einer lebenslangen Haftstrafe. Am Abend treffen sich die Juroren zum Abendessen in Charles' Restaurant.</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="es-419">
+<md:TitleDisplayUnlimited>ABANDONEN LA ESPERANZA LOS QUE ENTREN AQUÍ</md:TitleDisplayUnlimited>
+<md:TitleSort></md:TitleSort>
+<md:Summary190>Por decisión unánime, Jung Man-Chun es sentenciado a cadena perpetua. Los miembros del jurado se reúnen para cenar en el restaurante de Charles.</md:Summary190>
+<md:Summary400>La evidencia en su contra identifica a Jung Man-Chun como el asesino. Es declarado culpable por decisión unánime de los nueve miembros del jurado, y el juez Ryu Sung-Hoon lo sentencia a cadena perpetua. Esa noche, los miembros del jurado se reúnen para cenar en el restaurante de Charles.</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="es-ES">
+<md:TitleDisplayUnlimited>ABANDONAD TODA ESPERANZA
+QUIENES AQUÍ ENTRÁIS</md:TitleDisplayUnlimited>
+<md:TitleSort></md:TitleSort>
+<md:Summary190>Jung Man-chung es declarado culpable por el jurado y el juez Ruy Sung-hoon lo sentencia a cadena perpetua. El jurado se reúne para cenar en el Charles</md:Summary190>
+<md:Summary400>Con una abrumadora evidencia en su contra, identifican a Jung Man-chun como el asesino. Los nueve miembros del jurado le declaran culpable y el juez Ryu Sung-hoon le condena a cadena perpetua. Esa noche los miembros del jurado se reúnen a cenar en el restaurante de Charles.</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="ar-SA">
+<md:TitleDisplayUnlimited> كل من يدخل هنا عليه التخلّي عن الأمل</md:TitleDisplayUnlimited>
+<md:TitleSort></md:TitleSort>
+<md:Summary190>أدانت هيئة المحلفين بالإجماع "مان تشون جونغ" بالجريمة، وحكم عليه القاضي "ريو سونغ هون" بالسجن مدى الحياة. يجتمع المحلفون على العشاء في مطعم "تشارلز".</md:Summary190>
+<md:Summary400>يُدان "مان تشون جونغ" بجريمة القتل بعد وجود أدلة دامغة ضده. أدانه المحلفون التسعة بالإجماع، وحكم عليه القاضي "ريو سونغ هون" بالسجن مدى الحياة. في ذلك المساء، يجتمع المحلفون على العشاء في مطعم "تشارلز".</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="ja-JP">
+<md:TitleDisplayUnlimited>ここに来た者は希望を捨てろ</md:TitleDisplayUnlimited>
+<md:TitleSort></md:TitleSort>
+<md:Summary190>チョン･マンチュンを有罪と示す証拠。 陪審員とソンフンも全員一致で有罪判決。 裁判のあと、陪審員はチャールズの店で打ち上げをする。</md:Summary190>
+<md:Summary400>無罪だと言うには、あまりにも多くの証拠がチョン･マンチュンの犯を指し示していた。９人の陪審員も満場一致で有罪を主張し、ソンフンは無期懲役を言い渡す。裁判終了後の夜、陪審員たちはチャールズの店で打ち上げをするが…</md:Summary400>
+</md:LocalizedInfo>
+
+<md:LocalizedInfo language="hi-IN">
+<md:TitleDisplayUnlimited>यहाँ आने वाले सब उम्मीद छोड़ दें</md:TitleDisplayUnlimited>
+<md:TitleSort></md:TitleSort>
+<md:Summary190>जुंग मान-चुन को जूरी दोषी पाते हैं, जज सुंग-हून उसे आजीवन कारावास की सज़ा सुनाते हैं। बाद में जूरी चार्ल्स के रेस्तरां में डिनर के लिए जाते हैं।</md:Summary190>
+<md:Summary400>सभी सबूतों के मद्देनजर, जंग मान-चुन को हत्यारा करार दिया जाता है। नौ जूरी सदस्य एकमत होकर उसे दोषी पाते हैं, और जज रयू सुंग-हून उसे आजीवन कारावास की सजा सुनाते हैं। उसी शाम, जूरी सदस्य चार्ल्स के रेस्तरां में एक डिनर के लिए इकट्ठा होते हैं।</md:Summary400>
+</md:LocalizedInfo>
+
+<md:ReleaseYear>2022</md:ReleaseYear>
+<md:ReleaseDate>2022-09-17</md:ReleaseDate>
+<!-- WorkType is Required -->
+<md:WorkType>episode</md:WorkType>
+<!-- movie, episode, promotion, season, series -->
+<!-- The ID used in the MMC and in the Avail must also be included in the AltIdentifier section -->
+<md:AltIdentifier>
+<md:Namespace>ORG</md:Namespace>
+<!--EIDR, ISAN, IMDB, ORG-->
+<md:Identifier>tvn_blind_ep02</md:Identifier>
+</md:AltIdentifier>
+<md:RatingSet>
+<!-- each rating specifies exactly one country, system and value -->
+<!-- At least one rating is required.If the work is not rated, use -->
+<!--<md:notrated>true</md:notrated>-->
+<!-- At least one rating is required.If the work is not rated, use -->
+<!-- see http://www.movielabs.com/md/ratings/current.html for ratings -->
+<md:Rating>
+<md:Region>
+<md:country>KR</md:country>
+</md:Region>
+<md:System>KMRB</md:System>
+<!-- IT MBACT US MPAA -->
+<md:Value>15+</md:Value>
+<!--T VM14 VM18 G PG  PG - 13...-->
+</md:Rating>
+</md:RatingSet>
+<!-- people are used for the cast and crew. -->
+<!-- Prime Video accepts only role in production of media such as Director, Producer, Actor, Writer and Creator and can create like below.-->
+<md:People>
+   <md:Job>
+      <md:JobFunction>Director</md:JobFunction>
+      <md:BillingBlockOrder>1</md:BillingBlockOrder>
+   </md:Job>
+   <md:Name>
+     <md:DisplayName language="en-US">Jang Jeong-do</md:DisplayName>
+     <md:DisplayName language="ko-KR">장정도</md:DisplayName>
+     <md:DisplayName language="zh-TW">張正道</md:DisplayName>
+     <md:DisplayName language="ja-JP">チャン･ジョンド</md:DisplayName>
+     <md:DisplayName language="th-TH">ชังจองโด</md:DisplayName>
+     <md:DisplayName language="ms-MY">Jang Jeong-do</md:DisplayName>
+     <md:DisplayName language="id-ID">Jang Jeong-do</md:DisplayName>
+     <md:DisplayName language="pt-BR">Jang Jeong-do</md:DisplayName>
+     <md:DisplayName language="fr-FR">Jang Jeong-do</md:DisplayName>
+     <md:DisplayName language="it-IT">Jang Jeong-do</md:DisplayName>
+     <md:DisplayName language="de-DE">Jang Jeong-doe</md:DisplayName>
+     <md:DisplayName language="es-419">Jang Jeong-do</md:DisplayName>
+     <md:DisplayName language="es-ES">Jang Jeong-do</md:DisplayName>
+     <md:DisplayName language="ar-SA"> جانغ جيونغ دو</md:DisplayName>
+     <md:DisplayName language="hi-IN">जांग जियोंग-डो</md:DisplayName>
+   </md:Name>
+</md:People>
+
+<md:People>
+    <md:Job>
+        <md:JobFunction>Writer</md:JobFunction>
+        <md:BillingBlockOrder>1</md:BillingBlockOrder>
+    </md:Job>
+    <md:Name>
+        <md:DisplayName language="en-US">Kwon Gi-kyung</md:DisplayName>
+        <md:DisplayName language="ko-KR">권기경</md:DisplayName>
+        <md:DisplayName language="zh-TW">權基慶</md:DisplayName>
+     <md:DisplayName language="ja-JP">クォン･ギヨン</md:DisplayName>
+     <md:DisplayName language="th-TH">ควอนกีคยอง</md:DisplayName>
+     <md:DisplayName language="ms-MY">Kwon Gi-kyung</md:DisplayName>
+     <md:DisplayName language="id-ID">Kwon Gi-kyung</md:DisplayName>
+     <md:DisplayName language="pt-BR">Kwon Gi-kyung</md:DisplayName>
+     <md:DisplayName language="fr-FR">Kwon Gi-kyung</md:DisplayName>
+     <md:DisplayName language="it-IT">Kwon Gi-kyung</md:DisplayName>
+     <md:DisplayName language="de-DE">Kwon Gi-kyung</md:DisplayName>
+     <md:DisplayName language="es-419">Kwon Gi-kyung</md:DisplayName>
+     <md:DisplayName language="es-ES">Kwon Gi-kyung</md:DisplayName>
+     <md:DisplayName language="ar-SA"> كوون غي كيونغ</md:DisplayName>
+     <md:DisplayName language="hi-IN">क्वोन गी-क्यंग</md:DisplayName>
+    </md:Name>
+</md:People>
+
+<md:People>
+    <md:Job>
+       <md:JobFunction>Actor</md:JobFunction>
+       <md:BillingBlockOrder>1</md:BillingBlockOrder>
+    </md:Job>
+    <md:Name>
+        <md:DisplayName language="en-US">Ok Taec-yeon</md:DisplayName>
+        <md:DisplayName language="ko-KR">옥택연</md:DisplayName>
+        <md:DisplayName language="zh-TW">玉澤演</md:DisplayName>
+     <md:DisplayName language="ja-JP">オク･テギョン</md:DisplayName>
+     <md:DisplayName language="th-TH">อ๊กแทคยอน</md:DisplayName>
+     <md:DisplayName language="ms-MY">Ok Taec-yeon</md:DisplayName>
+     <md:DisplayName language="id-ID">Ok Taec-yeon</md:DisplayName>
+     <md:DisplayName language="pt-BR">Ok Taec-yeon</md:DisplayName>
+     <md:DisplayName language="fr-FR">Ok Taec-yeon</md:DisplayName>
+     <md:DisplayName language="it-IT">Ok Taec-yeon</md:DisplayName>
+     <md:DisplayName language="de-DE">Ok Taec-yeon</md:DisplayName>
+     <md:DisplayName language="es-419">Ok Taec-yeon</md:DisplayName>
+     <md:DisplayName language="es-ES">Ok Taec-yeon</md:DisplayName>
+     <md:DisplayName language="ar-SA"> أوك تايك يون</md:DisplayName>
+     <md:DisplayName language="hi-IN">ओक तैक-योन</md:DisplayName>
+    </md:Name>
+</md:People>
+
+<md:People>
+    <md:Job>
+      <md:JobFunction>Actor</md:JobFunction>
+      <md:BillingBlockOrder>2</md:BillingBlockOrder>
+    </md:Job>
+    <md:Name>
+      <md:DisplayName language="en-US">Ha Seok-jin</md:DisplayName>
+      <md:DisplayName language="ko-KR">하석진</md:DisplayName>
+     <md:DisplayName language="zh-TW">河錫辰</md:DisplayName>
+     <md:DisplayName language="ja-JP">ハ･ソクジン</md:DisplayName>
+     <md:DisplayName language="th-TH">ฮาซอกจิน</md:DisplayName>
+     <md:DisplayName language="ms-MY">Ha Seok-jin</md:DisplayName>
+     <md:DisplayName language="id-ID">Ha Seok-jin</md:DisplayName>
+     <md:DisplayName language="pt-BR">Ha Seok-jin</md:DisplayName>
+     <md:DisplayName language="fr-FR">Ha Seok-jin</md:DisplayName>
+     <md:DisplayName language="it-IT">Ha Seok-jin</md:DisplayName>
+     <md:DisplayName language="de-DE">Ha Seok-jin</md:DisplayName>
+     <md:DisplayName language="es-419">Ha Seok-jin</md:DisplayName>
+     <md:DisplayName language="es-ES">Ha Seok-jin</md:DisplayName>
+     <md:DisplayName language="ar-SA"> ها سيوك جين</md:DisplayName>
+     <md:DisplayName language="hi-IN">हा सोक-जिन</md:DisplayName>
+    </md:Name>
+</md:People>
+
+<md:People>
+     <md:Job>
+      <md:JobFunction>Actor</md:JobFunction>
+      <md:BillingBlockOrder>3</md:BillingBlockOrder>
+     </md:Job>
+     <md:Name>
+       <md:DisplayName language="en-US">Jung Eu-gene</md:DisplayName>
+       <md:DisplayName language="ko-KR">정은지</md:DisplayName>
+       <md:DisplayName language="zh-TW">鄭恩地</md:DisplayName>
+     <md:DisplayName language="ja-JP">チョン･ウンジ</md:DisplayName>
+     <md:DisplayName language="th-TH">จองอึนจี</md:DisplayName>
+     <md:DisplayName language="ms-MY">Jung Eu-gene</md:DisplayName>
+     <md:DisplayName language="id-ID">Jung Eu-gene</md:DisplayName>
+     <md:DisplayName language="pt-BR">Jung Eu-gene</md:DisplayName>
+     <md:DisplayName language="fr-FR">Jung Eu-gene</md:DisplayName>
+     <md:DisplayName language="it-IT">Jung Eu-gene</md:DisplayName>
+     <md:DisplayName language="de-DE">Jung Eu-gene</md:DisplayName>
+     <md:DisplayName language="es-419">Jung Eu-gene</md:DisplayName>
+     <md:DisplayName language="es-ES">Jung Eu-gene</md:DisplayName>
+     <md:DisplayName language="ar-SA"> جونغ إيون جي</md:DisplayName>
+     <md:DisplayName language="hi-IN">जंग यून-जी</md:DisplayName>
+     </md:Name>
+</md:People>
+<!--OriginalLanguage is required by Amazon-->
+<md:OriginalLanguage>ko-KR</md:OriginalLanguage>
+<!-- AssociatedOrg is used to provide the Partner Alias and is required -->
+<!-- Include the Partner Alias value in the @organizationID attribute and the value of "licensor" in the @role attribute -->
+<md:AssociatedOrg organizationID="cj_global" role="licensor"/>
+		<!-- Sequence Info and Parent information is required for TV episodes and seasons -->
+		<md:SequenceInfo>
+			<md:Number>2</md:Number>
+		</md:SequenceInfo>
+		<md:Parent relationshipType="isepisodeof">
+			<md:ParentContentID>md:cid:org:cj_global:tvn_blind_s1</md:ParentContentID>
+		</md:Parent>
+</mdmec:Basic>
+<!-- CompanyDisplayCredit is used to provide customer-facing studio credits. Required. -->
+<mdmec:CompanyDisplayCredit>
+<md:DisplayString language="en-US">CJ ENM, Studio Dragon</md:DisplayString>
+</mdmec:CompanyDisplayCredit>
+</mdmec:CoreMetadata>

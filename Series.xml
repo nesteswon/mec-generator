@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdmec:CoreMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:md="http://www.movielabs.com/schema/md/v2.6/md" xmlns:mdmec="http://www.movielabs.com/schema/mdmec/v2.6" xsi:schemaLocation="http://www.movielabs.com/schema/mdmec/v2.6/mdmec-v2.6.xsd">
+  <mdmec:Basic ContentID="md:cid:org:cj_global:tvn_mouse">
+    <md:LocalizedInfo language="en-US">
+      <md:TitleDisplayUnlimited>Mouse</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>Pursuit of a human predator, who falls into the top 1% of the deadliest psychopaths, upturns the lives of Jung Ba-reum, a local police officer recognized for his good deeds, and Ko Moo-chi, a wayward detective hell-bent on taking revenge against the killer who murdered his parents.</md:Summary400>
+      <md:Genre id="av_genre_suspense"> </md:Genre>
+      <md:Genre id="av_subgenre_suspense_crime"> </md:Genre>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="ko-KR">
+      <md:TitleDisplayUnlimited>마우스</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>자타 공인 바른 청년이자 동네 순경인 정바름과 어린 시절 살인마에게 부모를 잃고 복수를 향해 달려온 무법 형사 고무치가 사이코패스 중 상위 1퍼센트로 불리는 가장 악랄한 프레데터와 대치 끝, 운명이 송두리째 뒤바뀌는 모습을 그려낸 본격 인간 헌터 추적극</md:Summary400>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="zh-TW">
+      <md:TitleDisplayUnlimited>窺探</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>為了追捕前百分之一最致命的精神變態人類掠食者，此決定使鄭巴凜的生活變得天翻地覆。鄭巴凜是個為人稱道，盡忠職守的警察。而不按常理出牌、生活唯一目標為誓言報復殘忍殺害雙親兇手的偵探高武治，其生活亦被精神變態掠食者所影響。</md:Summary400>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="ms-MY">
+      <md:TitleDisplayUnlimited>MOUSE</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>Memburu pemangsa manusia, yang tergolong dalam 1% teratas psikopat yang berbahaya. Ia telah mengubah hidup Jung Bareum, seorang pegawai polis yang terkenal dengan kebaikannya dan Go Muchi, detektif degil yang sedaya upaya ingin membalas dendam terhadap pembunuh yang telah meragut nyawa ibu bapanya. </md:Summary400>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="id-ID">
+      <md:TitleDisplayUnlimited>MOUSE</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>Pengejaran predator manusia yang termasuk dalam top 1% psikopat mematikan mengubah total hidup Jung Ba-reum, seorang polisi setempat yang diakui karena perbuatan baiknya, dan Ko Moo-chi, seorang detektif liar yang bertekad kuat untuk membalas dendam pada pembunuh yang telah membunuh orang-tuanya.</md:Summary400>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="th-TH">
+      <md:TitleDisplayUnlimited>ไซโคพาธ ยีนฆาตกรรมอำมหิต</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>ไซโคพาธที่อันตรายที่สุดได้รับขนานนามว่าผู้ล่า พวกเขาสมควรจะได้ใช้ชีวิตร่วมกับผู้อื่นในสังคมหรือไม่</md:Summary400>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="pt-BR">
+      <md:TitleDisplayUnlimited>MOUSE</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>A busca por um predador humano, que é um dos psicopatas mais assassinos do mundo, muda a vida de Jung Ba-reum, um policial local reconhecido por suas boas ações, e de Ko Moo-chi, um investigador rebelde decidido a se vingar do assassino que matou seus pais.</md:Summary400>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="fr-FR">
+      <md:TitleDisplayUnlimited>MOUSE</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>La recherche d'un prédateur, qui se trouve être l'un des plus dangereux psychopathes qui soient, secoue les vies de Jung Ba-reum, un policier de quartier connu pour sa gentillesse, et Ko Moo-chi, un inspecteur rebelle fermement décidé à se venger contre le meurtrier qui a tué ses parents.</md:Summary400>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="it-IT">
+      <md:TitleDisplayUnlimited>MOUSE</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>La ricerca del predatore umano, appartenente all'1% degli psicopatici più micidiali, sconvolge le vite di Jung Ba-reum, poliziotto locale conosciuto per le sue buone azioni, e Ko Moo-chi, un detective imprevedibile deciso a vendicarsi del killer che gli ha ucciso i genitori.</md:Summary400>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="de-DE">
+      <md:TitleDisplayUnlimited>MOUSE</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>Die Jagd auf einen menschlichen Prädator, der zu den ein Prozent der tödlichsten Psychopathen zählt, bringt das Leben zweier Menschen durcheinander: Jung Ba-reum, ein Beamter der Ortspolizei, der für seine guten Taten bekannt ist, und Ko Moo-chi, ein eigenwilliger Ermittler, der sich an dem Mörder seiner Eltern rächen will.</md:Summary400>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="es-419">
+      <md:TitleDisplayUnlimited>MOUSE</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>La búsqueda de un depredador humano, que es uno de los psicópatas más sangrientos del mundo, cambia las vidas de Jung Ba-reum, un policía local reconocido por sus buenas acciones, y de Ko Moo-chi, un investigador rebelde decidido a vengar el asesinato de sus padres.</md:Summary400>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="es-ES">
+      <md:TitleDisplayUnlimited>MOUSE</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>El 1% de los psicópatas más despiadados: los depredadores. ¿Merecen vivir en nuestra sociedad? </md:Summary400>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="ar-SA">
+      <md:TitleDisplayUnlimited>الفأر</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>إنها قصة ملاحقة مفترس بشريّ، وهو من أخطر المختلين عقلياً الذين نسبتهم 1 بالمئة، ذلك ما يغير حياة &quot;جونغ با ريوم&quot;، الشرطي المحلي المعروف بأعماله الصالحة، و&quot;كو مون تشي&quot; المحقق العنيد والمصمم على الانتقام من قاتل والديه.</md:Summary400>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="ja-JP">
+      <md:TitleDisplayUnlimited>マウス～ある殺人者の系譜</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>韓国を震撼させた「ヘッドハンター事件」、サイコパスと呼ばれる彼らは社会で生きるに値するのか？25年後、善良な好青年で、誰からも愛される町の警察官チョン・バルムと、ヘッドハンターに両親を殺され、復讐に走る無法者刑事コ・ムチ。サイコパスの中でも上位1パーセントといわれる最も悪質な捕食者と対峙した結果、2人の人生は一変していく。</md:Summary400>
+    </md:LocalizedInfo>
+    <md:LocalizedInfo language="hi-IN">
+      <md:TitleDisplayUnlimited>माउस</md:TitleDisplayUnlimited>
+      <md:TitleSort/>
+      <md:Summary190/>
+      <md:Summary400>सबसे घातक मनोरोगियों में से 1% - दरिंदे। क्या वे दूसरों के साथ इस समाज में रहने लायक हैं?</md:Summary400>
+    </md:LocalizedInfo>
+    <md:ReleaseYear>2021</md:ReleaseYear>
+    <md:ReleaseDate>2021-03-03</md:ReleaseDate>
+    <md:WorkType>series</md:WorkType>
+    <md:AltIdentifier>
+      <md:Namespace>ORG</md:Namespace>
+      <md:Identifier>tvn_mouse</md:Identifier>
+    </md:AltIdentifier>
+    <md:RatingSet>
+      <md:Rating>
+        <md:Region>
+          <md:country>KR</md:country>
+        </md:Region>
+        <md:System>KMRB</md:System>
+        <md:Value>15+</md:Value>
+      </md:Rating>
+    </md:RatingSet>
+    <md:People>
+      <md:Job>
+        <md:JobFunction>Director</md:JobFunction>
+        <md:BillingBlockOrder>1</md:BillingBlockOrder>
+      </md:Job>
+      <md:Name>
+        <md:DisplayName language="en-US">Choi Jun-bae</md:DisplayName>
+        <md:DisplayName language="ko-KR">최준배</md:DisplayName>
+        <md:DisplayName language="zh-TW">崔俊裴</md:DisplayName>
+        <md:DisplayName language="ms-MY">Choi Jun-bae</md:DisplayName>
+        <md:DisplayName language="id-ID">Choi Jun-bae</md:DisplayName>
+        <md:DisplayName language="th-TH">ชเวจุนแบ</md:DisplayName>
+        <md:DisplayName language="pt-BR">Choi Jun-bae</md:DisplayName>
+        <md:DisplayName language="fr-FR">Choi Jun-bae</md:DisplayName>
+        <md:DisplayName language="it-IT">Choi Jun-bae</md:DisplayName>
+        <md:DisplayName language="de-DE">Choi Jun-bae</md:DisplayName>
+        <md:DisplayName language="es-419">Choi Jun-bae</md:DisplayName>
+        <md:DisplayName language="es-ES">Choi Jun-bae</md:DisplayName>
+        <md:DisplayName language="ar-SA">جون باي تشوي</md:DisplayName>
+        <md:DisplayName language="ja-JP">チェ・ジュンベ</md:DisplayName>
+        <md:DisplayName language="hi-IN">चोई जुन-बे</md:DisplayName>
+      </md:Name>
+    </md:People>
+    <md:People>
+      <md:Job>
+        <md:JobFunction>Writer</md:JobFunction>
+        <md:BillingBlockOrder>1</md:BillingBlockOrder>
+      </md:Job>
+      <md:Name>
+        <md:DisplayName language="en-US">Choi Ran</md:DisplayName>
+        <md:DisplayName language="ko-KR">최란</md:DisplayName>
+        <md:DisplayName language="zh-TW">崔蘭</md:DisplayName>
+        <md:DisplayName language="ms-MY">Choi Ran</md:DisplayName>
+        <md:DisplayName language="id-ID">Choi Ran</md:DisplayName>
+        <md:DisplayName language="th-TH">ชเวรัน</md:DisplayName>
+        <md:DisplayName language="pt-BR">Choi Ran</md:DisplayName>
+        <md:DisplayName language="fr-FR">Choi Ran</md:DisplayName>
+        <md:DisplayName language="it-IT">Choi Ran</md:DisplayName>
+        <md:DisplayName language="de-DE">Choi Ran</md:DisplayName>
+        <md:DisplayName language="es-419">Choi Ran</md:DisplayName>
+        <md:DisplayName language="es-ES">Choi Ran</md:DisplayName>
+        <md:DisplayName language="ar-SA">ران تشوي</md:DisplayName>
+        <md:DisplayName language="ja-JP">チェ・ラン</md:DisplayName>
+        <md:DisplayName language="hi-IN">चोई
+  रान</md:DisplayName>
+      </md:Name>
+    </md:People>
+    <md:People>
+      <md:Job>
+        <md:JobFunction>Actor</md:JobFunction>
+        <md:BillingBlockOrder>1</md:BillingBlockOrder>
+      </md:Job>
+      <md:Name>
+        <md:DisplayName language="en-US">Lee Seung-gi</md:DisplayName>
+        <md:DisplayName language="ko-KR">이승기</md:DisplayName>
+        <md:DisplayName language="zh-TW">李昇基</md:DisplayName>
+        <md:DisplayName language="ms-MY">Lee Seung-gi</md:DisplayName>
+        <md:DisplayName language="id-ID">Lee Seung-gi</md:DisplayName>
+        <md:DisplayName language="th-TH">อีซึงกิ</md:DisplayName>
+        <md:DisplayName language="pt-BR">Lee Seung-gi</md:DisplayName>
+        <md:DisplayName language="fr-FR">Lee Seung-gi</md:DisplayName>
+        <md:DisplayName language="it-IT">Lee Seung-gi</md:DisplayName>
+        <md:DisplayName language="de-DE">Lee Seung-gi</md:DisplayName>
+        <md:DisplayName language="es-419">Lee Seung-gi</md:DisplayName>
+        <md:DisplayName language="es-ES">Lee Seung-gi</md:DisplayName>
+        <md:DisplayName language="ar-SA">سيونغ غي لي</md:DisplayName>
+        <md:DisplayName language="ja-JP">イ・スンギ</md:DisplayName>
+        <md:DisplayName language="hi-IN">ली सियूंग-गी</md:DisplayName>
+      </md:Name>
+    </md:People>
+    <md:People>
+      <md:Job>
+        <md:JobFunction>Actor</md:JobFunction>
+        <md:BillingBlockOrder>2</md:BillingBlockOrder>
+      </md:Job>
+      <md:Name>
+        <md:DisplayName language="en-US">Lee Hee-jun</md:DisplayName>
+        <md:DisplayName language="ko-KR">이희준</md:DisplayName>
+        <md:DisplayName language="zh-TW">李熙俊</md:DisplayName>
+        <md:DisplayName language="ms-MY">Lee Hee-jun</md:DisplayName>
+        <md:DisplayName language="id-ID">Lee Hee-jun</md:DisplayName>
+        <md:DisplayName language="th-TH">อีฮีจุน</md:DisplayName>
+        <md:DisplayName language="pt-BR">Lee Hee-jun</md:DisplayName>
+        <md:DisplayName language="fr-FR">Lee Hee-jun</md:DisplayName>
+        <md:DisplayName language="it-IT">Lee Hee-jun</md:DisplayName>
+        <md:DisplayName language="de-DE">Lee Hee-jun</md:DisplayName>
+        <md:DisplayName language="es-419">Lee Hee-jun</md:DisplayName>
+        <md:DisplayName language="es-ES">Lee Hee-jun</md:DisplayName>
+        <md:DisplayName language="ar-SA">هي جون لي</md:DisplayName>
+        <md:DisplayName language="ja-JP">イ・ヒジュン</md:DisplayName>
+        <md:DisplayName language="hi-IN">ली ही-जून</md:DisplayName>
+      </md:Name>
+    </md:People>
+    <md:People>
+      <md:Job>
+        <md:JobFunction>Actor</md:JobFunction>
+        <md:BillingBlockOrder>3</md:BillingBlockOrder>
+      </md:Job>
+      <md:Name>
+        <md:DisplayName language="en-US">Park Ju-hyun</md:DisplayName>
+        <md:DisplayName language="ko-KR">박주현</md:DisplayName>
+        <md:DisplayName language="zh-TW">朴柱炫</md:DisplayName>
+        <md:DisplayName language="ms-MY">Park Ju-hyun</md:DisplayName>
+        <md:DisplayName language="id-ID">Park Ju-hyun</md:DisplayName>
+        <md:DisplayName language="th-TH">พัคจูฮยอน</md:DisplayName>
+        <md:DisplayName language="pt-BR">Park Ju-hyun</md:DisplayName>
+        <md:DisplayName language="fr-FR">Park Ju-hyun</md:DisplayName>
+        <md:DisplayName language="it-IT">Park Ju-hyun</md:DisplayName>
+        <md:DisplayName language="de-DE">Park Ju-hyun</md:DisplayName>
+        <md:DisplayName language="es-419">Park Ju-hyun</md:DisplayName>
+        <md:DisplayName language="es-ES">Park Ju-hyun</md:DisplayName>
+        <md:DisplayName language="ar-SA">سو جين غيونغ</md:DisplayName>
+        <md:DisplayName language="ja-JP">パク・ジュヒョン</md:DisplayName>
+        <md:DisplayName language="hi-IN">पार्क जू-ह्यून</md:DisplayName>
+      </md:Name>
+    </md:People>
+    <md:People>
+      <md:Job>
+        <md:JobFunction>Actor</md:JobFunction>
+        <md:BillingBlockOrder>4</md:BillingBlockOrder>
+      </md:Job>
+      <md:Name>
+        <md:DisplayName language="en-US">Gyeong Su-jin</md:DisplayName>
+        <md:DisplayName language="ko-KR">경수진</md:DisplayName>
+        <md:DisplayName language="zh-TW">慶收真</md:DisplayName>
+        <md:DisplayName language="ms-MY">Gyeong Su-jin</md:DisplayName>
+        <md:DisplayName language="id-ID">Gyeong Su-jin</md:DisplayName>
+        <md:DisplayName language="th-TH">คยองซูจิน</md:DisplayName>
+        <md:DisplayName language="pt-BR">Gyeong Su-jin</md:DisplayName>
+        <md:DisplayName language="fr-FR">Gyeong Su-jin</md:DisplayName>
+        <md:DisplayName language="it-IT">Gyeong Su-jin</md:DisplayName>
+        <md:DisplayName language="de-DE">Gyeong Su-jin</md:DisplayName>
+        <md:DisplayName language="es-419">Gyeong Su-jin</md:DisplayName>
+        <md:DisplayName language="es-ES">Gyeong Su-jin</md:DisplayName>
+        <md:DisplayName language="ar-SA">سو جين غيونغ</md:DisplayName>
+        <md:DisplayName language="ja-JP">キョン・スジン</md:DisplayName>
+        <md:DisplayName language="hi-IN">ग्योंग सु-जिन</md:DisplayName>
+      </md:Name>
+    </md:People>
+    <md:OriginalLanguage>ko-KR</md:OriginalLanguage>
+    <md:AssociatedOrg organizationID="cj_global" role="licensor"/>
+  </mdmec:Basic>
+  <mdmec:CompanyDisplayCredit>
+    <md:DisplayString language="en-US">CJ ENM</md:DisplayString>
+  </mdmec:CompanyDisplayCredit>
+</mdmec:CoreMetadata>
