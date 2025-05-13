@@ -138,7 +138,7 @@ def validate_art_references(df):
 
     
 def notify_slack_of_xml_error(error_message, filename="(알 수 없음)"):
-    webhook_url = "https://hooks.slack.com/services/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"
+    webhook_url = "https://hooks.slack.com/services/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"
     payload = {
         "text": f"*MEC XML 유효성 검사 실패!*\n📄 파일명: `{filename}`\n```{error_message}```"
     }
