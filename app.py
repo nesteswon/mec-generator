@@ -8,7 +8,7 @@
 # of this file is strictly prohibited without prior written consent from EncodingHouse Team.
 # ------------------------------------------------------------------------------
 import streamlit as st
-st.set_page_config(page_title="MEC Generator", page_icon="🎬", layout="centered")
+st.set_page_config(page_title="MEC Generator", page_icon="🎬", layout="wide")
 
 import pandas as pd
 import requests
@@ -113,17 +113,44 @@ def validate_summary_length(df):
             errors.append((i + 2, "Summary400", len(s400)))
     return errors
 
+def validate_art_references(df):
+    errors = []
+    for idx, row in df.iterrows():
+        language = str(row.get("Language", f"행 {idx+2}")).strip()  # Language 컬럼 사용, 없으면 행 번호
+
+        boxart = row.get("boxart")
+        cover = row.get("cover")
+        poster = row.get("poster")
+
+        missing = []
+        if pd.isna(boxart) or str(boxart).strip() == "":
+            missing.append("boxart")
+        if pd.isna(cover) or str(cover).strip() == "":
+            missing.append("cover")
+        if pd.isna(poster) or str(poster).strip() == "":
+            missing.append("poster")
+
+        if missing:
+            errors.append((language, ", ".join(missing)))
+    return errors
+
+
+
+    
 def notify_slack_of_xml_error(error_message, filename="(알 수 없음)"):
-    webhook_url = "https://hooks.slack.com/services/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"
+    webhook_url = "https://hooks.slack.com/services/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"
     payload = {
         "text": f"*MEC XML 유효성 검사 실패!*\n📄 파일명: `{filename}`\n```{error_message}```"
     }
     try:
         response = requests.post(webhook_url, json=payload)
         if response.status_code != 200:
-            st.warning(f"Slack 전송 실패: {response.text}")
+            st.warning(f"Slack 전송 실패: {response.status_code} / {response.reason}")
+        else:
+            st.info("✅ Slack 전송 성공")
     except Exception as e:
-        st.warning(f"Slack 알림 실패: {e}")
+        st.error(f"Slack 전송 중 예외 발생: {e}")
+
 
 def extract_paths(xml_string):
     try:
@@ -153,39 +180,39 @@ sample_library = {
 }
 
 # ---------- 상단 인터페이스 ----------
-col1, col2 = st.columns([6, 3])
+col1, col2 = st.columns([6, 1])
 with col1:
-    st.markdown("<h2 style='text-align:center;'>🎬 MEC Metadata Generator</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align:center;'>🎬 Amazon Prime Video MEC Metadata Generator</h2>", unsafe_allow_html=True)
 with col2:
-    mode_label = "🌞 Light Mode" if st.session_state.dark_mode else "🌙 Dark Mode"
+    mode_label = "🌞 Light" if st.session_state.dark_mode else "🌙 Dark"
     if st.button(mode_label):
         toggle_theme()
         st.rerun()
 
     if st.session_state.logged_in:
         st.markdown(f"**👤 {st.session_state.username}**")
-        if st.button("🚪 로그아웃"):
+        if st.button("🚪 Logout"):
             logout()
     else:
-        if st.button("🔐 로그인"):
+        if st.button("🔐 Login"):
             st.session_state.show_login = True
 
 # ---------- 로그인 화면 ----------
 if st.session_state.show_login:
-    col1, col2, col3 = st.columns([1, 5, 1])
+    col1, col2, col3 = st.columns([5, 5, 5])
     with col2:
         with st.form("login_form", clear_on_submit=True):
-            st.markdown("#### 로그인")
-            inner1, inner2, inner3 = st.columns([1, 5, 1])
+            st.markdown("#### Login")
+            inner1, inner2, inner3 = st.columns([3, 5, 3])
             with inner2:
-                username = st.text_input("사용자 이름")
-                password = st.text_input("비밀번호", type="password")
-                if st.form_submit_button("로그인"):
+                username = st.text_input("name")
+                password = st.text_input("password", type="password")
+                if st.form_submit_button("Login"):
                     if USERS.get(username) == password:
                         st.session_state.logged_in = True
                         st.session_state.username = username
                         st.session_state.show_login = False
-                        st.success(f"환영합니다, {username}님!")
+                        st.success(f"Welcome, {username}님!")
                         st.rerun()
                     else:
                         st.error("❌ 사용자 이름 또는 비밀번호가 올바르지 않습니다.")
@@ -199,9 +226,9 @@ generated_xml = None
 
 # ---------- 탭 1: MEC 생성 ----------
 with tab1:
-    st.markdown('<div style="text-align:center;"><h4>CSV 업로드 후 XML 생성</h4></div>', unsafe_allow_html=True)
+    st.markdown('<div style="text-align:center;"><h4>CSV 업로드 후 MEC 생성</h4></div>', unsafe_allow_html=True)
 
-    col1, col2, col3 = st.columns([1, 5, 1])
+    col1, col2, col3 = st.columns([3, 5, 3])
     with col2:
         uploaded_file = st.file_uploader("📁 CSV 파일을 업로드하세요", type=["csv"])
 
@@ -215,6 +242,18 @@ with tab1:
             st.error(f"❌ Summary 글자 수 제한 초과 항목 발견 ({len(summary_errors)}건)")
             st.dataframe(pd.DataFrame(summary_errors, columns=["행 번호", "컬럼명", "글자수"]))
             notify_slack_of_xml_error("Summary 글자 수 초과", filename)
+            st.stop()
+
+# 2. ArtReference 필수 항목 누락 검증
+        art_errors = validate_art_references(df)
+        if art_errors:
+            st.error(f"❌ ArtReference 필수 항목 누락 발견 ({len(art_errors)}건)")
+            error_df = pd.DataFrame(art_errors, columns=["행 번호", "누락된 항목"])
+            st.dataframe(error_df)
+
+            error_lines = "\n".join([f"{row[0]}행 누락: {row[1]}" for row in art_errors])
+            slack_message = f"ArtReference 필수 항목 누락:\n```\n{error_lines}\n```"
+            notify_slack_of_xml_error(slack_message, filename)
             st.stop()
 
         generated_xml = generate_mec_xml_from_dataframe(df)
@@ -238,30 +277,35 @@ with tab1:
 # ---------- 탭 2: 구조 비교 ----------
 with tab2:
     st.markdown('<div style="text-align:center;"><h4>🧩 2nd. Checkpoint</h4></div>', unsafe_allow_html=True)
-    selected_sample = st.radio("비교할 샘플을 선택하세요:", list(sample_library.keys()), horizontal=True)
-    sample_xml = sample_library.get(selected_sample)
 
-    if sample_xml and generated_xml:
-        sample_paths, err1 = extract_paths(sample_xml)
-        generated_paths, err2 = extract_paths(generated_xml)
+    # 가운데 정렬용 columns
+    col1, col2, col3 = st.columns([3, 6, 3])
+    with col2:
+        selected_sample = st.radio("비교할 샘플을 선택하세요:", list(sample_library.keys()), horizontal=True)
+        sample_xml = sample_library.get(selected_sample)
 
-        if err1 or err2:
-            st.error(f"XML 파싱 오류\n샘플: {err1}\n생성: {err2}")
-        else:
-            missing = sorted(sample_paths - generated_paths)
-            extra = sorted(generated_paths - sample_paths)
+        if sample_xml and generated_xml:
+            sample_paths, err1 = extract_paths(sample_xml)
+            generated_paths, err2 = extract_paths(generated_xml)
 
-            if not missing and not extra:
-                st.success("🎉 XML 구조가 완전히 일치합니다!")
+            if err1 or err2:
+                st.error(f"XML 파싱 오류\n샘플: {err1}\n생성: {err2}")
             else:
-                if missing:
-                    st.warning("🔻 생성 XML에 누락된 태그 경로:")
-                    st.code("\n".join(missing))
-                if extra:
-                    st.info("🔺 생성 XML에 추가된 태그 경로:")
-                    st.code("\n".join(extra))
-    elif not generated_xml:
-        st.info("📄 먼저 'MEC XML 생성' 탭에서 CSV를 업로드해주세요.")
+                missing = sorted(sample_paths - generated_paths)
+                extra = sorted(generated_paths - sample_paths)
+
+                if not missing and not extra:
+                    st.success("🎉 XML 구조가 완전히 일치합니다!")
+                else:
+                    if missing:
+                        st.warning("🔻 생성 XML에 누락된 태그 경로:")
+                        st.code("\n".join(missing))
+                    if extra:
+                        st.info("🔺 생성 XML에 추가된 태그 경로:")
+                        st.code("\n".join(extra))
+        elif not generated_xml:
+            st.info("📄 먼저 'MEC XML 생성' 탭에서 CSV를 업로드해주세요.")
+
 
 # ---------- 푸터 ----------
 st.markdown("""
