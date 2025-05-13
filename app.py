@@ -41,12 +41,10 @@ if st.session_state.dark_mode:
             padding: 0 !important;
         }
 
-        /* ✅ Streamlit 상단 여백 제거 */
         header[data-testid="stHeader"] {
             display: none;
         }
 
-        /* ✅ Streamlit 기본 푸터 숨김 (Made with Streamlit) */
         footer:has([data-testid="stDecoration"]) {
             visibility: hidden;
             height: 0;
@@ -81,8 +79,16 @@ if st.session_state.dark_mode:
             color: #ffffff !important;
             border: 1px solid #ffffff !important;
         }
-        </style>
+
+        .stForm button, div[role="form"] button {
+            color: #ffffff !important;
+            background-color: #0f79af !important;
+            font-weight: bold !important;
+            border-radius: 6px !important;
+        }
+    </style>
     """, unsafe_allow_html=True)
+
 
 
 else:
