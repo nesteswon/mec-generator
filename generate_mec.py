@@ -35,8 +35,8 @@ def to_date_string(v):
 def collect_multilingual_names(df, role_column):
     lang_map = {}
     for _, row in df.iterrows():
-        lang = to_str(row["Language"])
-        name = to_str(row.get(role_column))
+        lang = to_str(row.get("language"))
+        name = to_str(row.get(role_column.lower()))
         if name:
             lang_map[lang] = name
     return lang_map
@@ -61,8 +61,8 @@ def highlight_invalid_xml(xml_string):
 def validate_summary_length(df):
     errors = []
     for idx, row in df.iterrows():
-        s190 = to_str(row.get("Summary190"))
-        s400 = to_str(row.get("Summary400"))
+        s190 = to_str(row.get("summary190"))
+        s400 = to_str(row.get("summary400"))
         if len(s190) > 190:
             errors.append((idx + 2, "Summary190", len(s190)))
         if len(s400) > 400:
@@ -70,6 +70,8 @@ def validate_summary_length(df):
     return errors
 
 def generate_mec_xml_from_dataframe(df: pd.DataFrame):
+    df.columns = df.columns.str.lower()
+
     nsmap = {
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "xmlns:md": "http://www.movielabs.com/schema/md/v2.6/md",
@@ -79,19 +81,19 @@ def generate_mec_xml_from_dataframe(df: pd.DataFrame):
 
     root = ET.Element("mdmec:CoreMetadata", nsmap)
     base = df.iloc[0]
-    work_type = to_str(base["WorkType"]).strip().lower()
+    work_type = to_str(base.get("worktype", "")).strip().lower()
 
     basic = ET.SubElement(root, "mdmec:Basic", {
-        "ContentID": f"md:cid:org:{to_str(base['ContentID'])}"
+        "ContentID": f"md:cid:org:{to_str(base.get('contentid'))}"
     })
 
     for _, row in df.iterrows():
-        lang = to_str(row["Language"])
+        lang = to_str(row.get("language"))
         if not lang:
             continue
 
         loc = ET.SubElement(basic, "md:LocalizedInfo", {"language": lang})
-        ET.SubElement(loc, "md:TitleDisplayUnlimited").text = to_str(row["Title"])
+        ET.SubElement(loc, "md:TitleDisplayUnlimited").text = to_str(row.get("title"))
         ET.SubElement(loc, "md:TitleSort")
 
         for tag in ["boxart", "cover", "hero", "poster"]:
@@ -114,25 +116,25 @@ def generate_mec_xml_from_dataframe(df: pd.DataFrame):
                 })
                 art_ref_element.text = to_str(row[tag])
 
-        ET.SubElement(loc, "md:Summary190").text = to_str(row["Summary190"])
-        ET.SubElement(loc, "md:Summary400").text = to_str(row["Summary400"])
+        ET.SubElement(loc, "md:Summary190").text = to_str(row.get("summary190"))
+        ET.SubElement(loc, "md:Summary400").text = to_str(row.get("summary400"))
 
-        genre_columns = [col for col in df.columns if col.startswith("Genre")]
+        genre_columns = [col for col in df.columns if col.startswith("genre")]
         for genre_col in genre_columns:
             genre_id = to_str(row.get(genre_col))
             if genre_id:
                 ET.SubElement(loc, "md:Genre", {"id": genre_id}).text = " "
 
-    ET.SubElement(basic, "md:ReleaseYear").text = to_str(base["ReleaseYear"])
-    ET.SubElement(basic, "md:ReleaseDate").text = to_date_string(base["ReleaseDate"])
-    ET.SubElement(basic, "md:WorkType").text = to_str(base["WorkType"])
+    ET.SubElement(basic, "md:ReleaseYear").text = to_str(base.get("releaseyear"))
+    ET.SubElement(basic, "md:ReleaseDate").text = to_date_string(base.get("releasedate"))
+    ET.SubElement(basic, "md:WorkType").text = to_str(base.get("worktype"))
 
     alt = ET.SubElement(basic, "md:AltIdentifier")
     ET.SubElement(alt, "md:Namespace").text = "ORG"
-    ET.SubElement(alt, "md:Identifier").text = to_str(base["AltID_ORG"])
+    ET.SubElement(alt, "md:Identifier").text = to_str(base.get("altid_org"))
 
     rating_set = ET.SubElement(basic, "md:RatingSet")
-    ratings = to_str(base["RatingInfo"]).split(";")
+    ratings = to_str(base.get("ratinginfo")).split(";")
     for r in ratings:
         parts = r.strip().split(":")
         if len(parts) == 3:
@@ -151,7 +153,7 @@ def generate_mec_xml_from_dataframe(df: pd.DataFrame):
         if lang_name_map:
             person = ET.SubElement(basic, "md:People")
             job = ET.SubElement(person, "md:Job")
-            job_function = "Actor" if "Actor" in role else role
+            job_function = "Actor" if "actor" in role.lower() else role
             ET.SubElement(job, "md:JobFunction").text = job_function
             ET.SubElement(job, "md:BillingBlockOrder").text = str(billing_counters[job_function])
             billing_counters[job_function] += 1
@@ -160,16 +162,15 @@ def generate_mec_xml_from_dataframe(df: pd.DataFrame):
             for lang, name in lang_name_map.items():
                 ET.SubElement(name_tag, "md:DisplayName", {"language": lang}).text = name
 
-    ET.SubElement(basic, "md:OriginalLanguage").text = to_str(base["OriginalLanguage"])
-
+    ET.SubElement(basic, "md:OriginalLanguage").text = to_str(base.get("originallanguage"))
     ET.SubElement(basic, "md:AssociatedOrg", {
-        "organizationID": to_str(base["OrgID"]),
+        "organizationID": to_str(base.get("orgid")),
         "role": "licensor"
     })
 
     if work_type in ["season", "episode"]:
-        seq_number = to_str(base.get("SequenceNumber"))
-        parent_id = to_str(base.get("ParentContentID"))
+        seq_number = to_str(base.get("sequencenumber"))
+        parent_id = to_str(base.get("parentcontentid"))
 
         if seq_number:
             seq_info = ET.SubElement(basic, "md:SequenceInfo")
@@ -183,7 +184,7 @@ def generate_mec_xml_from_dataframe(df: pd.DataFrame):
             ET.SubElement(parent, "md:ParentContentID").text = f"md:cid:org:{parent_id}"
 
     credit = ET.SubElement(root, "mdmec:CompanyDisplayCredit")
-    ET.SubElement(credit, "md:DisplayString", {"language": "en-US"}).text = to_str(base["DisplayString"])
+    ET.SubElement(credit, "md:DisplayString", {"language": "en-US"}).text = to_str(base.get("displaystring"))
 
     xml_str = ET.tostring(root, encoding="utf-8")
     pretty_xml = minidom.parseString(xml_str).toprettyxml(indent="  ", encoding="utf-8").decode("utf-8")
