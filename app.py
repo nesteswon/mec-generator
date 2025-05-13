@@ -238,47 +238,63 @@ with tab1:
     with col2:
         uploaded_file = st.file_uploader("📁 CSV 파일을 업로드하세요", type=["csv"])
 
-    if uploaded_file:
-        filename = uploaded_file.name
-        df = pd.read_csv(uploaded_file)
-        st.success(f"✅ {len(df)}개의 언어 행 로딩 완료!")
+    if not uploaded_file:
+        st.info("📂 먼저 CSV 파일을 업로드해주세요.")
+        st.stop()
 
-        summary_errors = validate_summary_length(df)
-        if summary_errors:
-            st.error(f"❌ Summary 글자 수 제한 초과 항목 발견 ({len(summary_errors)}건)")
-            st.dataframe(pd.DataFrame(summary_errors, columns=["행 번호", "컬럼명", "글자수"]))
-            notify_slack_of_xml_error("Summary 글자 수 초과", filename)
-            st.stop()
+    # ✅ 파일 읽기 및 컬럼 소문자화
+    filename = uploaded_file.name
+    df = pd.read_csv(uploaded_file)
+    df.columns = df.columns.str.lower()
 
-# 2. ArtReference 필수 항목 누락 검증
-        art_errors = validate_art_references(df)
-        if art_errors:
-            st.error(f"❌ ArtReference 필수 항목 누락 발견 ({len(art_errors)}건)")
-            error_df = pd.DataFrame(art_errors, columns=["행 번호", "누락된 항목"])
-            st.dataframe(error_df)
+    st.success(f"✅ {len(df)}개의 언어 행 로딩 완료!")
 
-            error_lines = "\n".join([f"{row[0]}행 누락: {row[1]}" for row in art_errors])
-            slack_message = f"ArtReference 필수 항목 누락:\n```\n{error_lines}\n```"
-            notify_slack_of_xml_error(slack_message, filename)
-            st.stop()
+    # ✅ Summary 글자 수 검증
+    summary_errors = validate_summary_length(df)
+    if summary_errors:
+        st.error(f"❌ Summary 글자 수 제한 초과 항목 발견 ({len(summary_errors)}건)")
+        st.dataframe(pd.DataFrame(summary_errors, columns=["행 번호", "컬럼명", "글자수"]))
+        notify_slack_of_xml_error("Summary 글자 수 초과", filename)
+        st.stop()
 
-        generated_xml = generate_mec_xml_from_dataframe(df)
+    # ✅ worktype이 movie인 경우에만 ArtReference 검증
+    if 'worktype' in df.columns:
+        movie_rows = df[df['worktype'].str.lower() == 'movie']
+        if not movie_rows.empty:
+            art_errors = validate_art_references(movie_rows)
+            if art_errors:
+                st.error(f"❌ ArtReference 필수 항목 누락 발견 (worktype=movie 기준) ({len(art_errors)}건)")
+                error_df = pd.DataFrame(art_errors, columns=["언어", "누락된 항목"])
+                st.dataframe(error_df)
+                error_lines = "\n".join([f"{row[0]} 누락: {row[1]}" for row in art_errors])
+                slack_message = f"ArtReference 필수 항목 누락 (movie):\n```\n{error_lines}\n```"
+                notify_slack_of_xml_error(slack_message, filename)
+                st.stop()
+    else:
+        st.warning("⚠️ 'worktype' 컬럼이 없어 ArtReference 검증을 건너뜁니다.")
 
-        if is_valid_xml_structure(generated_xml):
-            st.success("✅ XML 구조 유효성 검사 통과!")
-        else:
-            st.error("❌ XML 구조 오류 발생! 다운로드 전에 확인이 필요합니다.")
-            notify_slack_of_xml_error("XML 구조 오류", filename)
+    # ✅ XML 생성 및 유효성 검사
+    generated_xml = generate_mec_xml_from_dataframe(df)
 
-        with st.expander("🔍 XML 내용 미리보기", expanded=True):
-            st.code(generated_xml, language="xml")
+    if is_valid_xml_structure(generated_xml):
+        st.success("✅ XML 구조 유효성 검사 통과!")
+    else:
+        st.error("❌ XML 구조 오류 발생! 다운로드 전에 확인이 필요합니다.")
+        notify_slack_of_xml_error("XML 구조 오류", filename)
 
-        st.download_button(
-            label="📥 MEC XML 다운로드",
-            data=generated_xml,
-            file_name="MEC_Metadata.xml",
-            mime="application/xml"
-        )
+    # ✅ XML 미리보기 추가
+    with st.expander("🔍 XML 내용 미리보기", expanded=True):
+        st.code(generated_xml, language="xml")
+
+    # ✅ 다운로드 버튼
+    st.download_button(
+        label="📥 MEC XML 다운로드",
+        data=generated_xml,
+        file_name="MEC_Metadata.xml",
+        mime="application/xml"
+    )
+
+
 
 # ---------- 탭 2: 구조 비교 ----------
 with tab2:
