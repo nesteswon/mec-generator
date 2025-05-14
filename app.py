@@ -111,12 +111,12 @@ def logout():
 def validate_summary_length(df):
     errors = []
     for i, row in df.iterrows():
-        s190 = str(row.get("Summary190", ""))
-        s400 = str(row.get("Summary400", ""))
+        s190 = str(row.get("summary190", ""))
+        s400 = str(row.get("summary400", ""))
         if len(s190) > 190:
-            errors.append((i + 2, "Summary190", len(s190)))
+            errors.append((i + 2, "summary190", len(s190)))
         if len(s400) > 400:
-            errors.append((i + 2, "Summary400", len(s400)))
+            errors.append((i + 2, "summary400", len(s400)))
     return errors
 
 def validate_art_references(df):
